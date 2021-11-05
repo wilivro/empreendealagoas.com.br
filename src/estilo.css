@@ -168,7 +168,7 @@ body * {
   width: 400px;
   margin-top: 10px;
   border-radius: 10px;
-  background-color: #e8466e;
+  background-color: #f39322;
   -webkit-transition: background-color 200ms ease;
   transition: background-color 200ms ease;
   font-family: Lato, sans-serif;
@@ -376,14 +376,17 @@ body * {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    background-color: #d1771d;
+    background-color: #f39322;
     text-align: center;
   }
+  .nav-menu a {
+    border-bottom: 1px solid white;
+  }
   .menu-button {
-    background-color: #d1771d;
+    background-color: #f39322;
   }
   .menu-button.w--open {
-    background-color: #d1771d;
+    background-color: #f39322;
   }
   .icon {
     color: #fff;
