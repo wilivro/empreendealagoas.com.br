@@ -2298,6 +2298,19 @@ body * {
   font-weight: 700;
   cursor: pointer;
 }
+
+.qr-codes {
+  display: inline-block;
+  margin-right: 30px;
+  width: 30%;
+}
+#qrcodes {
+  padding: 5px;
+  border-radius: 5px;
+}
+#qrcodes:target {
+  border:1px solid red;
+}
 .field-label {
   font-family: Montserrat, sans-serif;
   color: #2b4c5a;
