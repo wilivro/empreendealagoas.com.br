@@ -61,6 +61,11 @@
     .section {
         height: 120vh;
     }
+    #copyright {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
+    }
     .options-list li {
         width: 100%;
         margin-bottom: 0.5px;
@@ -84,6 +89,14 @@
 @media screen and (max-width:991px) {
     .section {
         height: 120vh;
+    }
+    .options-list {
+        width: 90%;
+    }
+    #copyright {
+        width: 100%;
+        text-align: left;
+        padding-left: 20px;
     }
     .options-list li {
         width: 100%;
