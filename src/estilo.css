@@ -2174,8 +2174,8 @@ body * {
   position: fixed;
   margin: auto;
   bottom: 1px;
-  /* left: 0; */
-  right: 0px;
+  left: 0;
+  /* right: 0px; */
 }
 
 .nav-link {
@@ -2591,6 +2591,9 @@ body * {
 }
 
 @media (max-width: 767px) {
+  .background-img-banner2 {
+    display: none;
+  }
   .link {
     font-size: 28px;
   }
