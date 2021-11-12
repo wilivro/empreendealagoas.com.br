@@ -2302,7 +2302,7 @@ body * {
 .qr-codes {
   display: inline-block;
   margin-right: 30px;
-  width: 30%;
+  width: 130px;
 }
 #qrcodes {
   padding: 5px;
