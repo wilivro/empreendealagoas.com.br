@@ -112,7 +112,7 @@
               LOGIN
             </h1>
             <div class="form-block w-form">
-              <form class="form w-clearfix" data-name="Login" action="https://wiquadro.com.br/site/login"
+              <form class="form w-clearfix" data-name="Login" action="http://localhost/site/login"
                 id="wf-form-Login" method="POST" name="wf-form-Login">
                 <label class="field-label" for="LoginForm_username">
                   e-mail
@@ -125,9 +125,9 @@
                 <input class="text-field-2 w-input" data-name="LoginForm_password" maxlength="32"
                   name="LoginForm[password]" id="LoginForm_password" type="password" required="required"
                   type="password" /><p class=" alert alert-light text-danger hidden" role="alert" id="alertStatus_autoricao">A senha inserida está incorreta.<b>
-                <a href="https://wiquadro.com.br/site/esqueciminhasenha" class="text-danger">Esqueceu a senha?</a></b></p>
+                <a href="http://localhost/site/esqueciminhasenha" class="text-danger">Esqueceu a senha?</a></b></p>
                 <input class="submit-button w-button" id ="entrar" data-wait="Please wait..." type="submit" value="ENTRAR" />
-                <!-- <a class="submit-button-2 w-inline-block" href="https://wiquadro.com.br/site/registro">
+                <!-- <a class="submit-button-2 w-inline-block" href="http://localhost/site/registro">
                   <div class="text-block-3">
                     CADASTRAR
                   </div>
@@ -291,7 +291,7 @@
         data: form.serialize(), // serializes the form's elements.
         success: function(data)
         {
-          window.location.href = "https://wiquadro.com.br/home/index";
+          form.unbind('submit').submit()
         },
         error: function(){
           $('#alertStatus_autoricao').removeClass('hidden');
