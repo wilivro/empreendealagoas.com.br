@@ -1,3 +1,9 @@
+<style>
+  .hidden {
+    display: none !important;
+    visibility: hidden !important;
+  }
+</style>
 <!DOCTYPE html>
 <!-- Last Published: Thu Jul 06 2017 19:06:15 GMT+0000 (UTC) -->
 <html>
@@ -118,8 +124,9 @@
                 </label>
                 <input class="text-field-2 w-input" data-name="LoginForm_password" maxlength="32"
                   name="LoginForm[password]" id="LoginForm_password" type="password" required="required"
-                  type="password" />
-                <input class="submit-button w-button" data-wait="Please wait..." type="submit" value="ENTRAR" />
+                  type="password" /><p class=" alert alert-light text-danger hidden" role="alert" id="alertStatus_autoricao">A senha inserida está incorreta.<b>
+                <a href="https://wiquadro.com.br/site/esqueciminhasenha" class="text-danger">Esqueceu a senha?</a></b></p>
+                <input class="submit-button w-button" id ="entrar" data-wait="Please wait..." type="submit" value="ENTRAR" />
                 <!-- <a class="submit-button-2 w-inline-block" href="https://wiquadro.com.br/site/registro">
                   <div class="text-block-3">
                     CADASTRAR
@@ -274,6 +281,24 @@
   <script src="src/js/script.js" type="text/javascript">
   </script>
   <script>
+    $("#wf-form-Login").submit(function(e) {
+      e.preventDefault(); // avoid to execute the actual submit of the form.
+      var form = $(this);
+      var url = form.attr('action');
+      $.ajax({
+        type: "POST",
+        url: url,
+        data: form.serialize(), // serializes the form's elements.
+        success: function(data)
+        {
+          window.location.href = "https://wiquadro.com.br/home/index";
+        },
+        error: function(){
+          $('#alertStatus_autoricao').removeClass('hidden');
+        }
+      });
+    });
+
     var organization_token = '270e8d045b7815128ed16ba13b2af61e4cf2a680';
     var icon_color = 'null';
     var init_minimal = 'true';
