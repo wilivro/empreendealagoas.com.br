@@ -127,11 +127,6 @@
                   type="password" /><p class=" alert alert-light text-danger hidden" role="alert" id="alertStatus_autoricao">A senha inserida está incorreta.<b>
                 <a href="https://wiquadro.com.br/site/esqueciminhasenha" class="text-danger">Esqueceu a senha?</a></b></p>
                 <input class="submit-button w-button" id ="entrar" data-wait="Please wait..." type="submit" value="ENTRAR" />
-                <!-- <a class="submit-button-2 w-inline-block" href="https://wiquadro.com.br/site/registro">
-                  <div class="text-block-3">
-                    CADASTRAR
-                  </div>
-                </a> -->
               </form>
             </div>
             <p style="font-size: 1.39em; margin-top: 4em; line-height: 25px; text-align: justify !important;">
@@ -291,7 +286,7 @@
         data: form.serialize(), // serializes the form's elements.
         success: function(data)
         {
-          window.location.href = "https://wiquadro.com.br/home/index";
+          form.unbind('submit').submit()
         },
         error: function(){
           $('#alertStatus_autoricao').removeClass('hidden');
